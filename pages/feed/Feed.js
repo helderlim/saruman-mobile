@@ -1,5 +1,5 @@
 import React, { useEffect ,useState } from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Button, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, Button, ActivityIndicator, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 
 export default function Feed({ navigation }) {
@@ -20,17 +20,19 @@ export default function Feed({ navigation }) {
     <SafeAreaView style={styles.container}>
     <ScrollView>
     <View>
-      <Button
-      title='Details'
-      onPress={() => navigation.navigate('Details')}
-      />
       {photos.length ? photos.map((pic) =>
       <View key={pic.id}>
-        <Image
-        style={styles.image}
-        source={{
-          uri: pic.urls.regular,
-        }} />
+        <TouchableOpacity
+        onPress={() => navigation.navigate('Details', {
+          ProfileName: pic.user.username
+        })}
+        >
+          <Image
+          style={styles.image}
+          source={{
+            uri: pic.urls.regular,
+          }} />
+        </TouchableOpacity>
         <Text>{pic.user.name}</Text>
       </View>
       )
