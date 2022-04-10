@@ -6,7 +6,6 @@ import Caroussel from '../../components/Caroussel/Caroussel';
 
 export default function Feed({ navigation }) {
   const [photos, setPhotos] = useState([]);
-  console.log('photos', photos)
 
   useEffect(() => {
     async function getPost() {
