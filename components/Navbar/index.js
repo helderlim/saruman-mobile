@@ -15,17 +15,17 @@ export default (props) => {
         <Icon name="home" size={45} color='#000'/>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Feed')}
+        onPress={() => navigation.navigate('Search')}
       >
         <Icon name="search" size={45} color='#000'/>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Feed')}
+        onPress={() => navigation.navigate('Chat')}
       >
         <Icon name="chat-bubble-outline" size={45} color='#000'/>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Feed')}
+        onPress={() => navigation.navigate('Profile')}
       >
         <Icon name="person" size={45} color='#000'/>
       </TouchableOpacity>
