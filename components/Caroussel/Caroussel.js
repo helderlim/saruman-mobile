@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StatusBar, FlatList, Image, Animated, Text, View, Dimensions, StyleSheet, TouchableOpacity } from 'react-native';
+import { FlatList, Image, View, Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('screen');
 
 const data = [];
@@ -11,7 +11,7 @@ export default (props) => {
   const listPhotos = props.listPhotos.map((urls) => urls.urls)
   return (
     <View style={{
-      flex: 1, backgroundColor: '#000', width: imageW,
+      flex: 1, width: imageW,
       height: imageH,
     }}>
       <FlatList
