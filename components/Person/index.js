@@ -5,7 +5,7 @@ export default (props) => {
   const data = props.profile
   const profile = {
     image: data.profile_image.large,
-    name: data.first_name + ' ' + data.last_name,
+    name: data.name,
     username: data.username
   }
   return (
@@ -15,8 +15,8 @@ export default (props) => {
         style={{ height: 45, width: 45, borderRadius: 45 / 2 }}
       />
       <View>
-        <Text style={{ color: 'white' }}>{profile.name}</Text>
-        <Text style={{ color: 'white' }}>@{profile.username}</Text>
+        <Text style={{ color: props.color }}>{profile.name}</Text>
+        <Text style={{ color: props.color }}>@{profile.username}</Text>
       </View>
     </View>
   );

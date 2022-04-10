@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, ActivityIndicator, TouchableOpacity } from 'react-native';
 import axios from 'axios';
-import Person from './Person';
+import Person from '../../components/Person';
 import Caroussel from '../../components/Caroussel/Caroussel';
 
 export default function Feed({ navigation }) {
@@ -11,7 +11,7 @@ export default function Feed({ navigation }) {
     async function getPost() {
       const response = await axios
         .get(
-          `https://api.unsplash.com/search/photos/?page=1&per_page=20&query=hotels&client_id=EnxW4t-KHx4sO5n8JwvVvPmQ_WJKE5DN8X6lj0oW2Mo`
+          `https://api.unsplash.com/search/photos/?page=2&per_page=20&query=hotels&client_id=EnxW4t-KHx4sO5n8JwvVvPmQ_WJKE5DN8X6lj0oW2Mo`
         )
       setPhotos(response.data.results)
     }
@@ -19,14 +19,6 @@ export default function Feed({ navigation }) {
   }, [])
 
   const listPhotos = photos.map((urls) => urls.urls)
-  var novoArray = []
-  const corte = 3
-  for (var i = 0; i < 3; i = i + corte) {
-    novoArray.push(listPhotos.slice(i, i + corte));
-  }
-  console.log('listPhotos', listPhotos)
-  console.log('novoArray', novoArray[0])
-
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -39,7 +31,7 @@ export default function Feed({ navigation }) {
               <View key={pic.id} style={styles.card}>
                 <TouchableOpacity
                   onPress={() => navigation.navigate('Details', {
-                    ProfileName: pic.user.username
+                    Profile: pic.user
                   })}
                 >
                   <Image
@@ -48,7 +40,7 @@ export default function Feed({ navigation }) {
                       uri: pic.urls.regular,
                     }} />
                 </TouchableOpacity>
-                <Person profile={pic.user} />
+                <Person profile={pic.user} color={'white'} />
               </View>
             ) : <ActivityIndicator size="large" color="#0000ff" />
           }

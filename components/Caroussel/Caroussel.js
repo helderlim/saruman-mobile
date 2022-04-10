@@ -24,8 +24,7 @@ export default (props) => {
             <Image source={{ uri: item.regular }} style={{
               width: imageW,
               height: imageH,
-              resizeMode: 'cover',
-              borderRadius: 16
+              resizeMode: 'cover'
             }} />
           </View>
         }}
