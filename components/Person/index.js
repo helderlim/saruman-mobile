@@ -9,7 +9,7 @@ export default (props) => {
     username: data.username
   }
   return (
-    <View style={{ flex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 5 }}>
+    <View style={{ flex: 1, display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: 2 }}>
       <Image
         source={{ uri: profile.image }}
         style={{ height: 45, width: 45, borderRadius: 45 / 2 }}

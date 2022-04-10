@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView, ActivityIndicator, TouchableOpacity, Dimensions } from 'react-native';
 import axios from 'axios';
 import Person from '../../components/Person';
-import Caroussel from '../../components/Caroussel/Caroussel';
+const { width, height } = Dimensions.get('screen');
+
 
 export default function Feed({ navigation }) {
   const [photos, setPhotos] = useState([]);
@@ -53,6 +54,7 @@ export default function Feed({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: width,
     backgroundColor: '#121212',
     alignItems: 'center',
     justifyContent: 'center',

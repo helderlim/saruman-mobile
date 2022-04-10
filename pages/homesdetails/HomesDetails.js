@@ -54,6 +54,7 @@ export default function HomeDetails({ route }) {
             keyExtractor={(_, index) => index.toString()}
             pagingEnabled
             numColumns={2}
+            scrollEnabled={false}
             renderItem={({ item }) => {
               return <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Image source={{ uri: item.regular }} style={{
