@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Profile from './pages/Profile';
 import Search from './pages/Search';
 import Chat from './pages/Chat';
+import MapPage from './pages/MapPage';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
         <Stack.Screen name="Search" component={Search} options={{ headerShown: false }}/>
         <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false }}/>
+        <Stack.Screen name="Maps" component={MapPage} options={{ headerShown: false }}/>
       </Stack.Navigator>
       <Navbar />
     </NavigationContainer>
