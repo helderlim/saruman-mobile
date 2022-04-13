@@ -20,6 +20,11 @@ export default (props) => {
         <Icon name="search" size={45} color='#000'/>
       </TouchableOpacity>
       <TouchableOpacity
+        onPress={() => navigation.navigate('Maps')}
+      >
+        <Icon name="map" size={45} color='#000'/>
+      </TouchableOpacity>
+      <TouchableOpacity
         onPress={() => navigation.navigate('Chat')}
       >
         <Icon name="chat-bubble-outline" size={45} color='#000'/>
