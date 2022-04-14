@@ -22,7 +22,6 @@ export default function HomeDetails({ route }) {
     getPost();
   }, [])
   const profile = route.params.Profile
-  console.log('profile', profile)
 
   const listPhotos = photos.map((urls) => urls.urls)
 

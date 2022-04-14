@@ -17,11 +17,11 @@ export default function App() {
       <StatusBar />
       <Stack.Navigator initialRouteName="Feed">
         <Stack.Screen name="Feed" component={Feed} options={{ headerShown: false }}/>
-        <Stack.Screen name="Details" component={HomeDetails} options={{ headerShown: false }}/>
-        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
-        <Stack.Screen name="Search" component={Search} options={{ headerShown: false }}/>
-        <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false }}/>
-        <Stack.Screen name="Maps" component={MapPage} options={{ headerShown: false }}/>
+        <Stack.Screen name="Details" component={HomeDetails} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Search" component={Search} />
+        <Stack.Screen name="Chat" component={Chat} />
+        <Stack.Screen name="Maps" component={MapPage} />
       </Stack.Navigator>
       <Navbar />
     </NavigationContainer>
