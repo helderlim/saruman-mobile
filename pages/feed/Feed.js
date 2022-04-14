@@ -26,7 +26,7 @@ export default function Feed({ navigation }) {
         <View style={styles.cardList}>
           <Text style={styles.title}>Destaques da</Text>
           <Text style={styles.title}>Semana</Text>
-          <Text style={styles.subtitle}>QUER VIAJAR HOJE?</Text>
+          <Text style={styles.subtitle}>ESTADIAS RECOMENDADAS</Text>
           {photos.length
             ? photos.map((pic) =>
               <View key={pic.id} style={styles.card}>
