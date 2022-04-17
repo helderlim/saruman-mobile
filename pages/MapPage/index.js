@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Image, Text, View, Dimensions, TextInput, ScrollView, Platform, PermissionsAndroid } from 'react-native';
+import { Image, Text, View, Dimensions, TextInput, ScrollView } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 const { width, height } = Dimensions.get('screen');
 
@@ -62,15 +62,6 @@ export default () => {
               <TextInput placeholder="   Search Location" style={{ borderWidth: 2, width: width * 0.95, borderRadius: 3, marginBottom: 10 }} />
               <View style={{ backgroundColor: 'black', padding: 2, borderRadius: 5 }}>
                 <MapView style={{ height: 550, width: width - 20 }}
-                onMapReady={()=>{
-                  Platform.OS === 'android' ? 
-                  PermissionsAndroid.request(
-                    PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION)
-                    .then(()=> {
-                      console.log("USUARIO ACEITOU")
-                    })
-                    : ''
-                }}
                  region={region}
                  zoomEnabled={true}
                  showsUserLocation={true}

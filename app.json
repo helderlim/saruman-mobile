@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "saruman-mobile",
+    "name": "Homebios",
     "slug": "saruman-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/marker.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/map.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.helderlim.sarumanmobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
