@@ -20,8 +20,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <li>	🚧  Pagina de perfil 🚀 Em construção...  🚧</li>
 <li>	🚧  Localização atual 🚀 Em construção...🚧</li>
 <li>	🚧  Pagina de login 🚀 Em construção...  🚧</li>
-
-
-
 </ul>
 
